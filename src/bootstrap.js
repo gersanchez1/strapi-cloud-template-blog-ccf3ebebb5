@@ -245,6 +245,7 @@ async function importSeedData() {
     global: ['find', 'findOne'],
     about: ['find', 'findOne'],
     'infocard-doble': ['find', 'findOne'],
+    'use-strappi': ['find', 'findOne'],
   });
 
   // Create all entries
