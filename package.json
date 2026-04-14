@@ -1,8 +1,8 @@
 {
-  "name": "my-app-name",
+  "name": "headless-strapi-vtex-faststore",
   "version": "0.1.0",
   "private": true,
-  "description": "A Strapi application",
+  "description": "Headless CMS built with Strapi v5 for VTEX FastStore integration",
   "scripts": {
     "build": "strapi build",
     "deploy": "strapi deploy",
@@ -12,9 +12,9 @@
     "strapi": "strapi"
   },
   "dependencies": {
-    "@strapi/plugin-cloud": "5.34.0",
-    "@strapi/plugin-users-permissions": "5.34.0",
-    "@strapi/strapi": "5.34.0",
+    "@strapi/plugin-cloud": "5.28.0",
+    "@strapi/plugin-users-permissions": "5.28.0",
+    "@strapi/strapi": "5.28.0",
     "better-sqlite3": "11.3.0",
     "fs-extra": "^10.0.0",
     "mime-types": "^2.1.27",

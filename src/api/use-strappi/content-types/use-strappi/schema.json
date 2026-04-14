@@ -1,0 +1,18 @@
+{
+  "kind": "singleType",
+  "collectionName": "use_strappis",
+  "info": {
+    "singularName": "use-strappi",
+    "pluralName": "use-strappis",
+    "displayName": "UseStrappi"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Use": {
+      "type": "boolean"
+    }
+  }
+}

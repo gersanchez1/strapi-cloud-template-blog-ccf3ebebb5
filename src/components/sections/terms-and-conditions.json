@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_sections_terms_and_conditions",
+  "info": {
+    "displayName": "Terms and Conditions",
+    "icon": "file-alt",
+    "description": "Optional terms and conditions block"
+  },
+  "options": {},
+  "attributes": {
+    "active": {
+      "type": "boolean",
+      "default": false
+    },
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "text"
+    }
+  }
+}

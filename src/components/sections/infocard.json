@@ -1,0 +1,107 @@
+{
+  "collectionName": "components_sections_infocards",
+  "info": {
+    "displayName": "Infocard",
+    "icon": "layer-group",
+    "description": "Card with media, CTA, and positioning options"
+  },
+  "options": {},
+  "attributes": {
+    "mediaType": {
+      "type": "enumeration",
+      "enum": ["image", "gif", "mp4", "video_pes"],
+      "default": "image"
+    },
+    "imageSrc": {
+      "type": "string"
+    },
+    "mobileImageSrc": {
+      "type": "string"
+    },
+    "isPriority": {
+      "type": "boolean",
+      "default": false
+    },
+    "urlVideoPes": {
+      "type": "string"
+    },
+    "urlVideoMobilePes": {
+      "type": "string"
+    },
+    "alignVideo": {
+      "type": "enumeration",
+      "enum": ["LEFT", "CENTER", "RIGHT"],
+      "default": "CENTER"
+    },
+    "buttonsVideo": {
+      "type": "enumeration",
+      "enum": ["TRANSPARENT", "WHITE"],
+      "default": "TRANSPARENT"
+    },
+    "widthVideo": {
+      "type": "string"
+    },
+    "heigthVideo": {
+      "type": "string"
+    },
+    "widthVideoMobile": {
+      "type": "string"
+    },
+    "heigthVideoMobile": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sections.cta"
+    },
+    "termsAndConditions": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sections.terms-and-conditions"
+    },
+    "widthOption": {
+      "type": "enumeration",
+      "enum": ["100%", "50%"],
+      "default": "50%"
+    },
+    "mobileWidthOption": {
+      "type": "enumeration",
+      "enum": ["100%", "50%"],
+      "default": "100%"
+    },
+    "skuId": {
+      "type": "string",
+      "default": ""
+    },
+    "positionHorizontal": {
+      "type": "string",
+      "default": "20%"
+    },
+    "positionVertical": {
+      "type": "string",
+      "default": "50%"
+    },
+    "positionHorizontalMobile": {
+      "type": "string",
+      "default": "20%"
+    },
+    "positionVerticalMobile": {
+      "type": "string",
+      "default": "50%"
+    },
+    "markerConfiguration": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sections.marker-configuration"
+    },
+    "promotionSettings": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sections.promotion-settings"
+    }
+  }
+}

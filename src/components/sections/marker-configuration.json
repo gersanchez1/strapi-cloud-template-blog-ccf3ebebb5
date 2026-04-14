@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_sections_marker_configurations",
+  "info": {
+    "displayName": "Marker Configuration",
+    "icon": "map-pin",
+    "description": "Visual marker overlay settings"
+  },
+  "options": {},
+  "attributes": {
+    "markerColor": {
+      "type": "enumeration",
+      "enum": ["white", "black"],
+      "default": "white"
+    },
+    "markerPosition": {
+      "type": "enumeration",
+      "enum": ["left", "right"],
+      "default": "right"
+    }
+  }
+}

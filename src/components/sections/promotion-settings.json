@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_sections_promotion_settings",
+  "info": {
+    "displayName": "Promotion Settings",
+    "icon": "chart-line",
+    "description": "Analytics pixel configuration for promotions"
+  },
+  "options": {},
+  "attributes": {
+    "promotion_id": {
+      "type": "string",
+      "default": ""
+    },
+    "promotion_name": {
+      "type": "string",
+      "default": ""
+    },
+    "promotion_creative": {
+      "type": "enumeration",
+      "enum": ["BANNER", "TEASER", "FEATURE", "CTA", "CARRUSEL"],
+      "default": "BANNER"
+    },
+    "promotion_position": {
+      "type": "integer",
+      "default": 1
+    },
+    "promotion_target": {
+      "type": "string",
+      "default": ""
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "infocard_dobles",
+  "info": {
+    "singularName": "infocard-doble",
+    "pluralName": "infocard-dobles",
+    "displayName": "InfocardDoble",
+    "description": "Section with 2 infocards side by side"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "page": {
+      "type": "string",
+      "required": true
+    },
+    "position": {
+      "type": "integer",
+      "default": 0
+    },
+    "card1": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sections.infocard",
+      "required": true
+    },
+    "card2": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sections.infocard",
+      "required": true
+    }
+  }
+}

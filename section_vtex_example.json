@@ -1,0 +1,410 @@
+{
+  "name": "InfocardDoble",
+  "schema": {
+    "title": "Infocard Doble",
+    "description": "Sección con 2 infocards",
+    "type": "object",
+    "properties": {
+      "card1": {
+        "title": "Tarjeta 1",
+        "type": "object",
+        "properties": {
+          "mediaType": {
+            "title": "Tipo de contenido que se cargará en la tarjeta 1",
+            "description": "Escribir el tipo al cual corresponde el contenido, el tipo vide_pes es para videos con controles: image | gif | mp4 | video_pes",
+            "type": "string"
+          },
+          "imageSrc": {
+            "title": "Multimedia element (Desktop) tarjeta 1",
+            "description": "El formato del video debe estar en .mp4",
+            "type": "string",
+            "widget": {
+              "ui:widget": "media-gallery"
+            }
+          },
+          "mobileImageSrc": {
+            "title": "Multimedia element (Mobile) tarjeta 1",
+            "description": "Imagen o video para Mobile (MP4 o imagen). Se muestra solo en mobile",
+            "type": "string",
+            "widget": {
+              "ui:widget": "media-gallery"
+            }
+          },
+          "isPriority": {
+            "title": "Si se prioriza la carga del banner, dejar en true si es el banner principal",
+            "type": "boolean",
+            "default": false
+          },
+          "urlVideoPes": {
+            "title": "Video URL desktop",
+            "type": "string"
+          },
+          "urlVideoMobilePes": {
+            "title": "Video URL Mobile",
+            "type": "string"
+          },
+          "alignVideo": {
+            "title": "Alineacion del video url",
+            "type": "string",
+            "enum": ["LEFT", "CENTER", "RIGHT"],
+            "default": "CENTER"
+          },
+          "buttonsVideo": {
+            "title": "Estilo de color de botones",
+            "type": "string",
+            "enum": ["TRANSPARENT", "WHITE"],
+            "default": "TRANSPARENT"
+          },
+          "widthVideo": {
+            "title": "Ancho de video desktop",
+            "type": "string",
+            "description": "Puedes usar valores en porcentaje, como '100%', para que el tamaño se ajuste proporcionalmente, o valores en píxeles, como '100px', para establecer un tamaño fijo."
+          },
+          "heigthVideo": {
+            "title": "Alto de video desktop",
+            "type": "string",
+            "description": "Puedes usar valores en porcentaje, como '100%', para que el tamaño se ajuste proporcionalmente, o valores en píxeles, como '100px', para establecer un tamaño fijo."
+          },
+          "widthVideoMobile": {
+            "title": "Ancho de video mobile",
+            "type": "string",
+            "description": "Puedes usar valores en porcentaje, como '100%', para que el tamaño se ajuste proporcionalmente, o valores en píxeles, como '100px', para establecer un tamaño fijo."
+          },
+          "heigthVideoMobile": {
+            "title": "Alto de video mobile",
+            "type": "string",
+            "description": "Puedes usar valores en porcentaje, como '100%', para que el tamaño se ajuste proporcionalmente, o valores en píxeles, como '100px', para establecer un tamaño fijo."
+          },
+          "title": {
+            "title": "Título de Tarjeta 1",
+            "type": "string"
+          },
+          "cta": {
+            "title": "CTA de Tarjeta 1",
+            "type": "object",
+            "properties": {
+              "isArrow": {
+                "title": "¿Mostrar flecha?",
+                "type": "boolean"
+              },
+              "title": {
+                "title": "Texto del CTA",
+                "type": "string"
+              },
+              "link": {
+                "title": "Enlace del CTA",
+                "type": "string"
+              }
+            }
+          },
+          "termsAndConditions": {
+            "title": "Terminos y condiciones",
+            "type": "object",
+            "properties": {
+              "active": {
+                "title": "Activar",
+                "type": "boolean"
+              },
+              "title": {
+                "title": "Titulo",
+                "type": "string"
+              },
+              "text": {
+                "title": "Texto",
+                "type": "string"
+              }
+            }
+          },
+          "widthOption": {
+            "title": "Ancho de la Tarjeta 1 (Desktop)",
+            "type": "string",
+            "enum": ["100%", "50%"],
+            "default": "50%"
+          },
+          "mobileWidthOption": {
+            "title": "Ancho de la Tarjeta 1 (Mobile)",
+            "type": "string",
+            "enum": ["100%", "50%"],
+            "default": "100%"
+          },
+          "skuId": {
+            "title": "SKU ID de Tarjeta 1",
+            "type": "string",
+            "default": ""
+          },
+          "positionHorizontal": {
+            "title": "horizontal position",
+            "type": "string",
+            "default": "20%"
+          },
+          "positionVertical": {
+            "title": "vertical position",
+            "type": "string",
+            "default": "50%"
+          },
+          "positionHorizontalMobile": {
+            "title": "horizontal position MOBILE",
+            "type": "string",
+            "default": "20%"
+          },
+          "positionVerticalMobile": {
+            "title": "vertical position MOBILE",
+            "type": "string",
+            "default": "50%"
+          },
+          "markerConfiguration": {
+            "title": "Marker Configuration (Card 1)",
+            "type": "object",
+            "properties": {
+              "markerColor": {
+                "title": "Marker Color",
+                "type": "string",
+                "enum": ["white", "black"],
+                "default": "white"
+              },
+              "markerPosition": {
+                "title": "Marker Position",
+                "type": "string",
+                "enum": ["left", "right"],
+                "default": "right"
+              }
+            }
+          },
+          "promotionSettings": {
+            "title": "Promotion settings (Card 1)",
+            "description": "Configuración adicional para pixeles",
+            "type": "object",
+            "properties": {
+              "promotion_id": {
+                "title": "Promotion ID",
+                "type": "string",
+                "default": ""
+              },
+              "promotion_name": {
+                "title": "Promotion Name",
+                "type": "string",
+                "default": ""
+              },
+              "promotion_creative": {
+                "title": "Promotion Creative",
+                "type": "string",
+                "enum": ["BANNER", "TEASER", "FEATURE", "CTA", "CARRUSEL"],
+                "default": "BANNER"
+              },
+              "promotion_position": {
+                "title": "Promotion Position",
+                "type": "number",
+                "default": 1
+              },
+              "promotion_target": {
+                "title": "Promotion Target",
+                "type": "string",
+                "default": ""
+              }
+            }
+          }
+        }
+      },
+      "card2": {
+        "title": "Tarjeta 2",
+        "type": "object",
+        "properties": {
+          "mediaType": {
+            "title": "Tipo de contenido que se cargará en la tarjeta 2",
+            "description": "Escribir el tipo al cual corresponde el contenido, el tipo vide_pes es para videos con controles: image | gif | mp4 | video_pes",
+            "type": "string"
+          },
+          "imageSrc": {
+            "title": "Multimedia element (Desktop) tarjeta 2",
+            "description": "El formato del video debe estar en .mp4",
+            "type": "string",
+            "widget": {
+              "ui:widget": "media-gallery"
+            }
+          },
+          "mobileImageSrc": {
+            "title": "Multimedia element (Mobile) tarjeta 2",
+            "description": "Imagen o video para Mobile (MP4 o imagen). Se muestra solo en mobile",
+            "type": "string",
+            "widget": {
+              "ui:widget": "media-gallery"
+            }
+          },
+          "isPriority": {
+            "title": "Si se prioriza la carga del banner, dejar en true si es el banner principal",
+            "type": "boolean",
+            "default": false
+          },
+          "urlVideoPes": {
+            "title": "Video URL desktop",
+            "type": "string"
+          },
+          "urlVideoMobilePes": {
+            "title": "Video URL Mobile",
+            "type": "string"
+          },
+          "alignVideo": {
+            "title": "Alineacion del video url",
+            "type": "string",
+            "enum": ["LEFT", "CENTER", "RIGHT"],
+            "default": "CENTER"
+          },
+          "buttonsVideo": {
+            "title": "Estilo de color de botones",
+            "type": "string",
+            "enum": ["TRANSPARENT", "WHITE"],
+            "default": "TRANSPARENT"
+          },
+          "widthVideo": {
+            "title": "Ancho de video desktop",
+            "type": "string",
+            "description": "Puedes usar valores en porcentaje, como '100%', para que el tamaño se ajuste proporcionalmente, o valores en píxeles, como '100px', para establecer un tamaño fijo."
+          },
+          "heigthVideo": {
+            "title": "Alto de video desktop",
+            "type": "string",
+            "description": "Puedes usar valores en porcentaje, como '100%', para que el tamaño se ajuste proporcionalmente, o valores en píxeles, como '100px', para establecer un tamaño fijo."
+          },
+          "widthVideoMobile": {
+            "title": "Ancho de video mobile",
+            "type": "string",
+            "description": "Puedes usar valores en porcentaje, como '100%', para que el tamaño se ajuste proporcionalmente, o valores en píxeles, como '100px', para establecer un tamaño fijo."
+          },
+          "heigthVideoMobile": {
+            "title": "Alto de video mobile",
+            "type": "string",
+            "description": "Puedes usar valores en porcentaje, como '100%', para que el tamaño se ajuste proporcionalmente, o valores en píxeles, como '100px', para establecer un tamaño fijo."
+          },
+          "title": {
+            "title": "Título de Tarjeta 2",
+            "type": "string"
+          },
+          "cta": {
+            "title": "CTA de Tarjeta 2",
+            "type": "object",
+            "properties": {
+              "isArrow": {
+                "title": "¿Mostrar flecha?",
+                "type": "boolean"
+              },
+              "title": {
+                "title": "Texto del CTA",
+                "type": "string"
+              },
+              "link": {
+                "title": "Enlace del CTA",
+                "type": "string"
+              }
+            }
+          },
+          "termsAndConditions": {
+            "title": "Terminos y condiciones",
+            "type": "object",
+            "properties": {
+              "active": {
+                "title": "Activar",
+                "type": "boolean"
+              },
+              "title": {
+                "title": "Titulo",
+                "type": "string"
+              },
+              "text": {
+                "title": "Texto",
+                "type": "string"
+              }
+            }
+          },
+          "widthOption": {
+            "title": "Ancho de la Tarjeta 2 (Desktop)",
+            "type": "string",
+            "enum": ["100%", "50%"],
+            "default": "50%"
+          },
+          "mobileWidthOption": {
+            "title": "Ancho de la Tarjeta 2 (Mobile)",
+            "type": "string",
+            "enum": ["100%", "50%"],
+            "default": "100%"
+          },
+          "skuId": {
+            "title": "SKU ID de Tarjeta 2",
+            "type": "string",
+            "default": ""
+          },
+          "positionHorizontal": {
+            "title": "horizontal position",
+            "type": "string",
+            "default": "20%"
+          },
+          "positionVertical": {
+            "title": "vertical position",
+            "type": "string",
+            "default": "50%"
+          },
+          "positionHorizontalMobile": {
+            "title": "horizontal position MOBILE",
+            "type": "string",
+            "default": "20%"
+          },
+          "positionVerticalMobile": {
+            "title": "vertical position MOBILE",
+            "type": "string",
+            "default": "50%"
+          },
+          "markerConfiguration": {
+            "title": "Marker Configuration (Card 2)",
+            "type": "object",
+            "properties": {
+              "markerColor": {
+                "title": "Marker Color",
+                "type": "string",
+                "enum": ["white", "black"],
+                "default": "white"
+              },
+              "markerPosition": {
+                "title": "Marker Position",
+                "type": "string",
+                "enum": ["left", "right"],
+                "default": "right"
+              }
+            }
+          },
+          "promotionSettings": {
+            "title": "Promotion settings (Card 2)",
+            "description": "Configuración adicional para pixeles",
+            "type": "object",
+            "properties": {
+              "promotion_id": {
+                "title": "Promotion ID",
+                "type": "string",
+                "default": ""
+              },
+              "promotion_name": {
+                "title": "Promotion Name",
+                "type": "string",
+                "default": ""
+              },
+              "promotion_creative": {
+                "title": "Promotion Creative",
+                "type": "string",
+                "enum": ["BANNER", "TEASER", "FEATURE", "CTA", "CARRUSEL"],
+                "default": "BANNER"
+              },
+              "promotion_position": {
+                "title": "Promotion Position",
+                "type": "number",
+                "default": 1
+              },
+              "promotion_target": {
+                "title": "Promotion Target",
+                "type": "string",
+                "default": ""
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

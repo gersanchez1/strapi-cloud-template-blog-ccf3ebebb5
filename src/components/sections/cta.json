@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_sections_ctas",
+  "info": {
+    "displayName": "CTA",
+    "icon": "cursor",
+    "description": "Call-to-action button with optional arrow"
+  },
+  "options": {},
+  "attributes": {
+    "isArrow": {
+      "type": "boolean",
+      "default": false
+    },
+    "title": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    }
+  }
+}
