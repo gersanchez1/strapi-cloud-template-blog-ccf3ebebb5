@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_sections_navigations",
+  "info": {
+    "displayName": "Navigation",
+    "icon": "bars",
+    "description": "Navigation with page links and full menu structure"
+  },
+  "options": {},
+  "attributes": {
+    "pageLinks": {
+      "type": "component",
+      "repeatable": true,
+      "component": "sections.page-link"
+    },
+    "menu": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sections.header-menu"
+    }
+  }
+}

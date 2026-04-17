@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_sections_header_menus",
+  "info": {
+    "displayName": "Header Menu",
+    "icon": "bars",
+    "description": "Menu container with drawer menu items"
+  },
+  "options": {},
+  "attributes": {
+    "drawerMenu": {
+      "type": "component",
+      "repeatable": true,
+      "component": "sections.drawer-menu-item"
+    }
+  }
+}

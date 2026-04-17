@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_sections_menu_image_links",
+  "info": {
+    "displayName": "Menu Image Link",
+    "icon": "link",
+    "description": "Link for menu images (url, text)"
+  },
+  "options": {},
+  "attributes": {
+    "url": {
+      "type": "string"
+    },
+    "text": {
+      "type": "string"
+    }
+  }
+}

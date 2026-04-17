@@ -22,15 +22,20 @@ src/
   api/                              # Content Types (data models with API endpoints)
     article/                        # Collection - blog articles
     author/                         # Collection - article authors
-    banner-multimedia/              # Collection - banner images
     category/                       # Collection - article categories
+    custom-banner-multi-media/      # Collection - banner with media/video and text overlays
+    custom-header/                  # Collection - full header (logo, promo bar, nav, search)
+    custom-info-card/               # Collection - up to 4 info cards in grid
+    custom-product-shelf/           # Collection - product shelf with filtering and sorting
     infocard-doble/                 # Collection - dual infocard sections
     about/                          # Single - "About" page
     global/                         # Single - site-wide settings (name, SEO, favicon)
     use-strappi/                    # Single - feature flag
   components/                       # Reusable components (NO API endpoint, embedded in content types)
     shared/                         # Generic components (media, seo, quote, rich-text, slider)
-    sections/                       # VTEX section components (infocard, cta, terms, etc.)
+    sections/                       # VTEX section components (infocard, cta, terms, header, etc.)
+  middlewares/                      # Custom Strapi middlewares
+    rest-cache.js                   # Adds Cache-Control headers to API GET responses
   admin/                            # Admin panel customization
   extensions/                       # Plugin extensions
   bootstrap.js                      # Seed data + public permissions setup
@@ -101,6 +106,30 @@ Components are referenced in content type schemas with:
 | `terms-and-conditions.json` | Toggleable T&C block (active, title, text) |
 | `marker-configuration.json` | Visual marker settings (color, position) |
 | `promotion-settings.json` | Analytics pixel config (id, name, creative, position, target) |
+| `banner-text2.json` | Banner text2 overlay (content, link, isArrow) |
+| `shelf-cta.json` | Product shelf CTA (content, link) |
+| `facet.json` | Search facet key-value pair for product filtering |
+| `product-card-configuration.json` | Product card display options (showDiscountBadge, bordered) |
+| `info-card-item.json` | Info card with image, text, link, and promotion settings |
+| `header-logo.json` | Header logo (src, alt, link) |
+| `header-logo-link.json` | Logo link (url, title) |
+| `promo-bar-item.json` | Promotional bar entry with styling, CTA, links, Synerise |
+| `promo-bar-link.json` | Additional link for promotional bar (title, url) |
+| `synerise-segmentation.json` | Synerise segmentation config (expression, assignments) |
+| `navigation.json` | Navigation: page links + menu component |
+| `page-link.json` | Navigation page link (text, url) |
+| `header-menu.json` | Menu container with drawer menu items |
+| `drawer-menu-item.json` | Drawer menu entry (campaignId, title, jsonContent, images, subMenuCarousels) |
+| `drawer-images.json` | Container for drawer menu images |
+| `drawer-image.json` | Drawer image with link and promotion settings |
+| `sub-menu-carousel.json` | Sub-menu carousel (subCategoryTitle, subMenuImages) |
+| `sub-menu-image.json` | Sub-menu image with link |
+| `menu-image-link.json` | Shared link for menu images (url, text) |
+| `menu-promotion-settings.json` | Promotion settings for menu images (promotion_creative as free text) |
+| `search-input.json` | Search input config with Synerise indexes |
+| `sign-in-button.json` | Sign-in button (icon, label, myAccountLabel) |
+| `sign-in-icon.json` | Sign-in icon config (icon enum, alt) |
+| `cart-icon.json` | Shopping cart icon config (icon enum, alt) |
 
 ---
 
@@ -212,7 +241,7 @@ Same pattern for `routes` (createCoreRouter) and `services` (createCoreService).
 
 ## Page and Position System
 
-Section content types (like InfocardDoble) include `page` and `position` fields:
+Section content types (InfocardDoble, CustomBannerMultiMedia, CustomProductShelf, CustomInfoCards, CustomHeader) include `page` and `position` fields:
 
 - **`page`** (string): The URL path where this section should appear (e.g., `"/"` for home, `"/about"`)
 - **`position`** (integer): The order within the page (0, 1, 2, ...). Lower numbers render first.
@@ -294,4 +323,30 @@ GET /api/infocard-dobles?sort=position:asc
 
 # Combined
 GET /api/infocard-dobles?filters[page][$eq]=/&sort=position:asc&populate=*
+```
+
+---
+
+## Caching
+
+A custom middleware (`src/middlewares/rest-cache.js`) adds `Cache-Control` headers to all GET requests on `/api/*` endpoints:
+
+- **Browser cache**: 60 seconds (`max-age=60`)
+- **CDN/proxy cache**: 5 minutes (`s-maxage=300`)
+
+This avoids hitting the database on every request and improves first-response times. The middleware is registered in `config/middlewares.js` as `global::rest-cache`.
+
+---
+
+## Notes on Component Nesting
+
+Some VTEX sections (notably CustomHeader's `navigation.menu.drawerMenu`) have 7+ levels of component nesting. All levels are modeled as proper Strapi components so that non-technical users see labeled form fields in the admin panel. When querying deeply nested content types, use deep population:
+
+```
+GET /api/custom-headers?populate=deep
+```
+
+Or specify exact paths:
+```
+GET /api/custom-headers?populate[navigation][populate][menu][populate][drawerMenu][populate]=*
 ```

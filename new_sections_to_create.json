@@ -1,0 +1,953 @@
+[
+  {
+    "name": "CustomBannerMultiMedia",
+    "schema": {
+      "title": "Banner multi media",
+      "description": "Sección con una imagen o video y dos textos (1 botón) por encima",
+      "type": "object",
+      "properties": {
+        "mediaSrc": {
+          "title": "Multimedia element (Desktop)",
+          "description": "El formato del video debe estar en .mp4",
+          "type": "string",
+          "widget": {
+            "ui:widget": "media-gallery"
+          }
+        },
+        "mobileMediaSrc": {
+          "title": "Multimedia element (Mobile)",
+          "description": "Imagen o video para Mobile (MP4 o imagen). Se muestra solo en mobile",
+          "type": "string",
+          "widget": {
+            "ui:widget": "media-gallery"
+          }
+        },
+        "url": {
+          "title": "URL donde debe redirigir la imagen o el video",
+          "type": "string",
+          "default": "/"
+        },
+        "urlVideoPes": {
+          "title": "Video URL desktop",
+          "type": "string"
+        },
+        "urlVideoMobilePes": {
+          "title": "Video URL Mobile",
+          "type": "string"
+        },
+        "widthVideo": {
+          "title": "Ancho de video desktop",
+          "type": "string",
+          "description": "Puedes usar valores en porcentaje, como '100%', para que el tamaño se ajuste proporcionalmente, o valores en píxeles, como '100px', para establecer un tamaño fijo."
+        },
+        "heigthVideo": {
+          "title": "Alto de video desktop",
+          "type": "string",
+          "description": "Puedes usar valores en porcentaje, como '100%', para que el tamaño se ajuste proporcionalmente, o valores en píxeles, como '100px', para establecer un tamaño fijo."
+        },
+        "widthVideoMobile": {
+          "title": "Ancho de video mobile",
+          "type": "string",
+          "description": "Puedes usar valores en porcentaje, como '100%', para que el tamaño se ajuste proporcionalmente, o valores en píxeles, como '100px', para establecer un tamaño fijo."
+        },
+        "heigthVideoMobile": {
+          "title": "Alto de video mobile",
+          "type": "string",
+          "description": "Puedes usar valores en porcentaje, como '100%', para que el tamaño se ajuste proporcionalmente, o valores en píxeles, como '100px', para establecer un tamaño fijo."
+        },
+        "alignVideo": {
+          "title": "Alineacion del video url",
+          "type": "string",
+          "enum": [
+            "LEFT",
+            "CENTER",
+            "RIGHT"
+          ],
+          "default": "CENTER"
+        },
+        "buttonsVideo": {
+          "title": "Estilo de color de botones",
+          "type": "string",
+          "enum": [
+            "TRANSPARENT",
+            "WHITE"
+          ],
+          "default": "TRANSPARENT"
+        },
+        "isPriority": {
+          "title": "¿Se usará como banner principal?",
+          "description": "Se priorizará la carga del banner y el CTA subirá quedando a primera vista",
+          "type": "boolean",
+          "default": false
+        },
+        "text1": {
+          "title": "Texto 1",
+          "type": "string"
+        },
+        "text2": {
+          "title": "Texto 2",
+          "type": "object",
+          "properties": {
+            "content": {
+              "title": "Text Content",
+              "type": "string"
+            },
+            "link": {
+              "title": "Link URL",
+              "type": "string"
+            },
+            "isArrow": {
+              "title": "¿Mostrar flecha?",
+              "type": "boolean"
+            }
+          }
+        },
+        "termsAndConditions": {
+          "title": "Terminos y condiciones",
+          "type": "object",
+          "properties": {
+            "active": {
+              "title": "Activar",
+              "type": "boolean"
+            },
+            "title": {
+              "title": "Titulo",
+              "type": "string"
+            },
+            "text": {
+              "title": "Texto",
+              "type": "string"
+            }
+          }
+        },
+        "promotionSettings": {
+          "title": "Promotion settings",
+          "description": "Configuración adicional para el pixel PROMOTION_VIEW",
+          "type": "object",
+          "properties": {
+            "promotion_id": {
+              "title": "Promotion ID",
+              "type": "string",
+              "default": ""
+            },
+            "promotion_name": {
+              "title": "Promotion Name",
+              "type": "string",
+              "default": ""
+            },
+            "promotion_creative": {
+              "title": "Promotion Creative",
+              "type": "string",
+              "enum": [
+                "BANNER",
+                "TEASER",
+                "FEATURE",
+                "CTA",
+                "CARRUSEL"
+              ],
+              "default": "BANNER"
+            },
+            "promotion_position": {
+              "title": "Promotion Position",
+              "type": "number",
+              "default": 1
+            },
+            "promotion_target": {
+              "title": "Promotion Target",
+              "type": "string",
+              "default": ""
+            }
+          }
+        },
+        "skuId": {
+          "title": "SKU ID",
+          "type": "string",
+          "default": ""
+        },
+        "positionHorizontal": {
+          "title": "horizontal position",
+          "type": "string",
+          "default": "20%"
+        },
+        "positionVertical": {
+          "title": "vertical position",
+          "type": "string",
+          "default": "50%"
+        },
+        "positionHorizontalMobile": {
+          "title": "horizontal position MOBILE",
+          "type": "string",
+          "default": "20%"
+        },
+        "positionVerticalMobile": {
+          "title": "vertical position MOBILE",
+          "type": "string",
+          "default": "50%"
+        },
+        "markerConfiguration": {
+          "title": "Marker Configuration",
+          "type": "object",
+          "properties": {
+            "markerColor": {
+              "title": "Marker Color",
+              "type": "string",
+              "enum": [
+                "white",
+                "black"
+              ],
+              "default": "white"
+            },
+            "markerPosition": {
+              "title": "Marker Position",
+              "type": "string",
+              "enum": [
+                "left",
+                "right"
+              ],
+              "default": "right"
+            }
+          }
+        },
+        "dontShowMobile": {
+          "title": "No mostrar en mobile",
+          "type": "boolean",
+          "default": false
+        }
+      }
+    }
+  },
+  {
+    "name": "CustomProductShelf",
+    "requiredScopes": [],
+    "schema": {
+      "title": "Shelf custom at Home",
+      "description": "Custom Shelf only images at Home",
+      "type": "object",
+      "required": [
+        "title",
+        "numberOfItems",
+        "after",
+        "sort"
+      ],
+      "properties": {
+        "title": {
+          "type": "string",
+          "title": "Title"
+        },
+        "cta": {
+          "title": "Call To Action",
+          "type": "object",
+          "properties": {
+            "content": {
+              "title": "Text Content",
+              "type": "string"
+            },
+            "link": {
+              "title": "Link URL",
+              "type": "string"
+            }
+          }
+        },
+        "numberOfItems": {
+          "type": "integer",
+          "title": "Total number of items",
+          "default": 5,
+          "description": "Total number of items. The quantity may be smaller if the query returns fewer products."
+        },
+        "itemsPerPage": {
+          "type": "integer",
+          "title": "Number of items per page",
+          "default": 5,
+          "description": "Number of items to display per page in carousel"
+        },
+        "after": {
+          "type": "integer",
+          "title": "After",
+          "default": "0",
+          "description": "Initial pagination item"
+        },
+        "sort": {
+          "title": "Sort",
+          "description": "Items order",
+          "default": "score_desc",
+          "enum": [
+            "discount_desc",
+            "name_asc",
+            "name_desc",
+            "orders_desc",
+            "price_asc",
+            "price_desc",
+            "release_desc",
+            "score_desc"
+          ],
+          "enumNames": [
+            "Discount: higher to lower",
+            "Name: A-Z",
+            "Name: Z-A",
+            "Orders: higher to lower",
+            "Price: lower to higher",
+            "Price: higher to lower",
+            "Release date: newer to older",
+            "Relevance: higher to lower"
+          ]
+        },
+        "term": {
+          "type": "string",
+          "title": "Search term"
+        },
+        "selectedFacets": {
+          "title": "Facets",
+          "type": "array",
+          "items": {
+            "title": "Facet",
+            "type": "object",
+            "required": [
+              "key",
+              "value"
+            ],
+            "properties": {
+              "key": {
+                "title": "Key",
+                "description": "For collections use: productClusterIds",
+                "type": "string",
+                "default": "productClusterIds"
+              },
+              "value": {
+                "title": "Value",
+                "description": "E.g. For 'Most Wanted' collection, use: 140. To consult your collection ids go to Collections page",
+                "type": "string",
+                "default": "140"
+              }
+            }
+          }
+        },
+        "productCardConfiguration": {
+          "title": "Product Card Configuration",
+          "type": "object",
+          "properties": {
+            "showDiscountBadge": {
+              "title": "Show discount badge?",
+              "type": "boolean",
+              "default": true
+            },
+            "bordered": {
+              "title": "Cards should be bordered?",
+              "type": "boolean",
+              "default": true
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "CustomInfoCards",
+    "schema": {
+      "title": "Info Cards Section",
+      "description": "Displays up to 4 informational cards in two rows of two.",
+      "type": "object",
+      "properties": {
+        "cards": {
+          "type": "array",
+          "title": "Cards",
+          "items": {
+            "title": "Card",
+            "type": "object",
+            "required": [
+              "image",
+              "link",
+              "text1"
+            ],
+            "properties": {
+              "image": {
+                "type": "string",
+                "title": "Image URL",
+                "widget": {
+                  "ui:widget": "image-uploader"
+                }
+              },
+              "mobileImage": {
+                "type": "string",
+                "title": "Mobile Image URL",
+                "widget": {
+                  "ui:widget": "image-uploader"
+                }
+              },
+              "link": {
+                "type": "string",
+                "title": "Link URL"
+              },
+              "text1": {
+                "type": "string",
+                "title": "Text 1"
+              },
+              "text2": {
+                "type": "string",
+                "title": "Text 2"
+              },
+              "promotionSettings": {
+                "title": "Promotion settings",
+                "description": "Configuración adicional para pixeles",
+                "type": "object",
+                "properties": {
+                  "promotion_id": {
+                    "title": "Promotion ID",
+                    "type": "string",
+                    "default": ""
+                  },
+                  "promotion_name": {
+                    "title": "Promotion Name",
+                    "type": "string",
+                    "default": ""
+                  },
+                  "promotion_creative": {
+                    "title": "Promotion Creative",
+                    "type": "string",
+                    "enum": [
+                      "BANNER",
+                      "TEASER",
+                      "FEATURE",
+                      "CTA",
+                      "CARRUSEL"
+                    ],
+                    "default": "BANNER"
+                  },
+                  "promotion_position": {
+                    "title": "Promotion Position",
+                    "type": "number",
+                    "default": 1
+                  },
+                  "promotion_target": {
+                    "title": "Promotion Target",
+                    "type": "string",
+                    "default": ""
+                  }
+                }
+              }
+            }
+          },
+          "maxItems": 4,
+          "minItems": 1
+        }
+      },
+      "required": [
+        "cards"
+      ]
+    }
+  },
+  {
+    "name": "CustomHeader",
+    "requiredScopes": [],
+    "schema": {
+      "title": "CustomHeader Navbar",
+      "description": "Short description for the the section's purpose",
+      "required": [
+        "logo"
+      ],
+      "properties": {
+        "logo": {
+          "title": "Logo",
+          "type": "object",
+          "required": [
+            "src"
+          ],
+          "properties": {
+            "src": {
+              "title": "Image",
+              "type": "string",
+              "widget": {
+                "ui:widget": "media-gallery"
+              }
+            },
+            "alt": {
+              "title": "Alternative Label",
+              "type": "string"
+            },
+            "link": {
+              "title": "Logo Link",
+              "type": "object",
+              "required": [
+                "url",
+                "title"
+              ],
+              "properties": {
+                "url": {
+                  "title": "Link URL",
+                  "type": "string"
+                },
+                "title": {
+                  "title": "Link Title",
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "promoBar": {
+          "title": "Promotional Bar",
+          "type": "array",
+          "items": {
+            "title": "Promotional Bar",
+            "type": "object",
+            "properties": {
+              "onSynerise": {
+                "title": "¿Usar segmentacion Synerise?",
+                "description": "Activalo solo si esta promo depende de un segmento Synerise.",
+                "type": "boolean",
+                "default": false
+              },
+              "typeSynerise": {
+                "title": "Segmento Synerise",
+                "type": "string",
+                "description": "Debe coincidir con el valor recibido desde Synerise. Ejemplos: Hombre, Mujer, Home, Infantil."
+              },
+              "promoBackground": {
+                "title": "Color de fondo",
+                "description": "Usa formato HEX. Ejemplo: #E50010",
+                "type": "string"
+              },
+              "promoText": {
+                "title": "Texto principal",
+                "type": "string",
+                "description": "Mensaje corto. Recomendado: maximo 50 caracteres."
+              },
+              "promoTextColor": {
+                "title": "Color del texto principal",
+                "description": "Usa formato HEX. Ejemplo: #FFFFFF",
+                "type": "string"
+              },
+              "ctaText": {
+                "title": "Texto del CTA",
+                "type": "string"
+              },
+              "ctaTextColor": {
+                "title": "Color del CTA",
+                "description": "Usa formato HEX. Ejemplo: #FFFFFF",
+                "type": "string"
+              },
+              "linksListColor": {
+                "title": "Color de links",
+                "description": "Usa formato HEX. Ejemplo: #FFFFFF",
+                "type": "string"
+              },
+              "linksList": {
+                "title": "Links adicionales",
+                "type": "array",
+                "items": {
+                  "title": "Link",
+                  "type": "object",
+                  "properties": {
+                    "title": {
+                      "title": "Texto del link",
+                      "type": "string"
+                    },
+                    "url": {
+                      "title": "URL del link",
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "title",
+                    "url"
+                  ]
+                }
+              },
+              "termsAndConditionsColor": {
+                "title": "Color de terminos y condiciones",
+                "description": "Usa formato HEX. Ejemplo: #FFFFFF",
+                "type": "string"
+              },
+              "termsAndConditions": {
+                "title": "Texto de terminos y condiciones",
+                "type": "string",
+                "default": ""
+              },
+              "isUniqueLink": {
+                "title": "¿Es un enlace único?",
+                "type": "boolean",
+                "default": false
+              },
+              "uniqueLink": {
+                "title": "Enlace único",
+                "type": "string"
+              }
+            }
+          }
+        },
+        "syneriseSegmentation": {
+          "title": "Synerise Segmentacion",
+          "type": "object",
+          "properties": {
+            "enabled": {
+              "title": "Activar segmentacion Synerise",
+              "type": "boolean"
+            },
+            "expressionId": {
+              "title": "Expression ID",
+              "type": "string",
+              "description": "UUID o expressions/<id> de la segmentacion a consultar"
+            },
+            "workspaceGuid": {
+              "title": "Workspace GUID",
+              "type": "string",
+              "description": "Usuario para autenticacion Basic"
+            },
+            "workspaceApiKey": {
+              "title": "Workspace API key",
+              "type": "string",
+              "description": "Password para autenticacion Basic"
+            },
+            "assignments": {
+              "title": "Asignaciones de segmentacion",
+              "description": "Array de keys de localStorage. El mismo result del API se guarda en todas",
+              "type": "array",
+              "items": {
+                "title": "LocalStorage key",
+                "type": "string",
+                "description": "Ejemplo: snrs_cintillo-home o snrs_teaser-home"
+              }
+            }
+          }
+        },
+        "navigation": {
+          "title": "Navigation",
+          "type": "object",
+          "properties": {
+            "pageLinks": {
+              "title": "Links",
+              "type": "array",
+              "maxItems": 8,
+              "items": {
+                "title": "Link",
+                "type": "object",
+                "required": [
+                  "text",
+                  "url"
+                ],
+                "properties": {
+                  "text": {
+                    "title": "Link Text",
+                    "type": "string"
+                  },
+                  "url": {
+                    "title": "Link URL",
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            "menu": {
+              "type": "object",
+              "title": "Menu",
+              "properties": {
+                "drawerMenu": {
+                  "title": "Drawer Menu",
+                  "type": "array",
+                  "items": {
+                    "title": "Items",
+                    "type": "object",
+                    "properties": {
+                      "campaignId": {
+                        "type": "string",
+                        "title": "Campaign ID",
+                        "description": "AI Recommendation Campaign ID"
+                      },
+                      "title": {
+                        "title": "Title Text",
+                        "type": "string"
+                      },
+                      "jsonContent": {
+                        "title": "Json Content",
+                        "type": "string"
+                      },
+                      "images": {
+                        "type": "object",
+                        "title": "images",
+                        "properties": {
+                          "imagesMenu": {
+                            "title": "Drawer Menu",
+                            "type": "array",
+                            "items": {
+                              "title": "Image",
+                              "type": "object",
+                              "properties": {
+                                "idContentSynerise": {
+                                  "type": "string",
+                                  "title": "ID Categoria Synerise",
+                                  "description": ""
+                                },
+                                "src": {
+                                  "title": "Image",
+                                  "type": "string",
+                                  "widget": {
+                                    "ui:widget": "media-gallery"
+                                  }
+                                },
+                                "alt": {
+                                  "title": "Alternative Label",
+                                  "type": "string"
+                                },
+                                "link": {
+                                  "title": "Image Link",
+                                  "type": "object",
+                                  "properties": {
+                                    "url": {
+                                      "title": "Link URL",
+                                      "type": "string"
+                                    },
+                                    "text": {
+                                      "title": "Texto",
+                                      "type": "string",
+                                      "widget": {
+                                        "ui:widget": "draftjs-rich-text"
+                                      }
+                                    }
+                                  }
+                                },
+                                "promotionSettings": {
+                                  "title": "Promotion settings",
+                                  "description": "Configuración adicional para pixeles",
+                                  "type": "object",
+                                  "properties": {
+                                    "promotion_id": {
+                                      "title": "Promotion ID",
+                                      "type": "string",
+                                      "default": ""
+                                    },
+                                    "promotion_name": {
+                                      "title": "Promotion Name",
+                                      "type": "string",
+                                      "default": ""
+                                    },
+                                    "promotion_creative": {
+                                      "title": "Promotion Creative",
+                                      "type": "string",
+                                      "default": "Image"
+                                    },
+                                    "promotion_position": {
+                                      "title": "Promotion Position",
+                                      "type": "number",
+                                      "default": 1
+                                    },
+                                    "promotion_target": {
+                                      "title": "Promotion Target",
+                                      "type": "string",
+                                      "default": ""
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "subMenuCarousels": {
+                        "title": "Sub Menu Carousels",
+                        "type": "array",
+                        "items": {
+                          "title": "Sub Menu Carrousel",
+                          "type": "object",
+                          "properties": {
+                            "subCategoryTitle": {
+                              "title": "Subcategory Title",
+                              "type": "string",
+                              "description": "Nombre/título de la subcategoría, por ejemplo 'Recién Nacido'."
+                            },
+                            "subMenuImages": {
+                              "title": "SubMenu Carrousel Banners",
+                              "type": "array",
+                              "items": {
+                                "title": "Image",
+                                "type": "object",
+                                "properties": {
+                                  "src": {
+                                    "title": "Image",
+                                    "type": "string",
+                                    "widget": {
+                                      "ui:widget": "media-gallery"
+                                    }
+                                  },
+                                  "alt": {
+                                    "title": "Alternative Label",
+                                    "type": "string"
+                                  },
+                                  "link": {
+                                    "title": "Image Link",
+                                    "type": "object",
+                                    "properties": {
+                                      "url": {
+                                        "title": "Link URL",
+                                        "type": "string"
+                                      },
+                                      "text": {
+                                        "title": "Texto",
+                                        "type": "string",
+                                        "widget": {
+                                          "ui:widget": "draftjs-rich-text"
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "searchInput": {
+          "title": "Search Input",
+          "description": "Search Input configurations",
+          "type": "object",
+          "properties": {
+            "placeholder": {
+              "title": "Placeholder for Search Bar",
+              "type": "string",
+              "default": "Search everything at the store"
+            },
+            "apiHost": {
+              "title": "Synerise api host",
+              "type": "string",
+              "enumNames": [
+                "https://api.geb.synerise.com"
+              ],
+              "enum": [
+                "https://api.geb.synerise.com"
+              ],
+              "default": "https://api.geb.synerise.com"
+            },
+            "trackerKey": {
+              "title": "Synerise tracker key",
+              "type": "string"
+            },
+            "productsIndex": {
+              "title": "Products search index",
+              "type": "string"
+            },
+            "suggestionsIndex": {
+              "title": "Suggestions search index",
+              "type": "string"
+            },
+            "articlesIndex": {
+              "title": "Articles search index",
+              "type": "string"
+            },
+            "videosIndex": {
+              "title": "Videos search index",
+              "type": "string"
+            }
+          }
+        },
+        "signInButton": {
+          "title": "Sign In Button",
+          "type": "object",
+          "properties": {
+            "icon": {
+              "title": "Icon",
+              "type": "object",
+              "properties": {
+                "icon": {
+                  "title": "Icon",
+                  "type": "string",
+                  "enumNames": [
+                    "User"
+                  ],
+                  "enum": [
+                    "User"
+                  ],
+                  "default": "User"
+                },
+                "alt": {
+                  "title": "Alternative Label",
+                  "type": "string",
+                  "default": "User"
+                }
+              }
+            },
+            "label": {
+              "title": "Call to Action",
+              "type": "string",
+              "default": "Sign In"
+            },
+            "myAccountLabel": {
+              "title": "My Account Label",
+              "type": "string",
+              "default": "My Account"
+            }
+          }
+        },
+        "cartIcon": {
+          "title": "Cart Icon",
+          "type": "object",
+          "properties": {
+            "icon": {
+              "title": "Icon",
+              "type": "string",
+              "enumNames": [
+                "Shopping Cart"
+              ],
+              "enum": [
+                "ShoppingCart"
+              ],
+              "default": "ShoppingCart"
+            },
+            "alt": {
+              "title": "Alternative Label",
+              "type": "string",
+              "default": "Shopping Cart"
+            }
+          }
+        },
+        "searchInputv2": {
+          "title": "Search Input",
+          "description": "Search Input configurations",
+          "type": "object",
+          "properties": {
+            "placeholder": {
+              "title": "Placeholder for Search Bar",
+              "type": "string",
+              "default": "Search everything at the store"
+            },
+            "apiHost": {
+              "title": "Synerise api host",
+              "type": "string",
+              "enumNames": [
+                "https://api.geb.synerise.com"
+              ],
+              "enum": [
+                "https://api.geb.synerise.com"
+              ],
+              "default": "https://api.geb.synerise.com"
+            },
+            "trackerKey": {
+              "title": "Synerise tracker key",
+              "type": "string"
+            },
+            "productsIndex": {
+              "title": "Products search index",
+              "type": "string"
+            },
+            "suggestionsIndex": {
+              "title": "Suggestions search index",
+              "type": "string"
+            },
+            "articlesIndex": {
+              "title": "Articles search index",
+              "type": "string"
+            },
+            "videosIndex": {
+              "title": "Videos search index",
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+]

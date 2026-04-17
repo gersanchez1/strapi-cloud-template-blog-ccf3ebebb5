@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_sections_product_card_configurations",
+  "info": {
+    "displayName": "Product Card Configuration",
+    "icon": "cog",
+    "description": "Configuration for product card display options"
+  },
+  "options": {},
+  "attributes": {
+    "showDiscountBadge": {
+      "type": "boolean",
+      "default": true
+    },
+    "bordered": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

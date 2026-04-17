@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_sections_promo_bar_links",
+  "info": {
+    "displayName": "Promo Bar Link",
+    "icon": "link",
+    "description": "Additional link for promotional bar"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    }
+  }
+}

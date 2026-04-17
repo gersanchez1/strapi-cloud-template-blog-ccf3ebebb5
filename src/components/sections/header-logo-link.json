@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_sections_header_logo_links",
+  "info": {
+    "displayName": "Header Logo Link",
+    "icon": "link",
+    "description": "Link for the header logo (url, title)"
+  },
+  "options": {},
+  "attributes": {
+    "url": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    }
+  }
+}

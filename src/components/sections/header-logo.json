@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_sections_header_logos",
+  "info": {
+    "displayName": "Header Logo",
+    "icon": "image",
+    "description": "Logo with image source, alt text, and link"
+  },
+  "options": {},
+  "attributes": {
+    "src": {
+      "type": "string"
+    },
+    "alt": {
+      "type": "string"
+    },
+    "link": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sections.header-logo-link"
+    }
+  }
+}

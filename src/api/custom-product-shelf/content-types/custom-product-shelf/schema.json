@@ -1,0 +1,76 @@
+{
+  "kind": "collectionType",
+  "collectionName": "custom_product_shelves",
+  "info": {
+    "singularName": "custom-product-shelf",
+    "pluralName": "custom-product-shelves",
+    "displayName": "CustomProductShelf",
+    "description": "Custom product shelf with filtering, sorting, and card configuration"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "page": {
+      "type": "string",
+      "required": true
+    },
+    "position": {
+      "type": "integer",
+      "default": 0
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sections.shelf-cta"
+    },
+    "numberOfItems": {
+      "type": "integer",
+      "default": 5
+    },
+    "itemsPerPage": {
+      "type": "integer",
+      "default": 5
+    },
+    "after": {
+      "type": "integer",
+      "default": 0
+    },
+    "sort": {
+      "type": "enumeration",
+      "enum": [
+        "discount_desc",
+        "name_asc",
+        "name_desc",
+        "orders_desc",
+        "price_asc",
+        "price_desc",
+        "release_desc",
+        "score_desc"
+      ],
+      "default": "score_desc"
+    },
+    "term": {
+      "type": "string"
+    },
+    "selectedFacets": {
+      "type": "component",
+      "repeatable": true,
+      "component": "sections.facet"
+    },
+    "productCardConfiguration": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sections.product-card-configuration"
+    }
+  }
+}

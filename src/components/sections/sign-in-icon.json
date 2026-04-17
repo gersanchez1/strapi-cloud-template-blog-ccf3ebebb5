@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_sections_sign_in_icons",
+  "info": {
+    "displayName": "Sign In Icon",
+    "icon": "user",
+    "description": "Icon configuration for sign-in button"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "enumeration",
+      "enum": ["User"],
+      "default": "User"
+    },
+    "alt": {
+      "type": "string",
+      "default": "User"
+    }
+  }
+}

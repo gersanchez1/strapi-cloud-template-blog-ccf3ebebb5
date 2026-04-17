@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_sections_banner_text2s",
+  "info": {
+    "displayName": "Banner Text2",
+    "icon": "link",
+    "description": "Text2 block for banner multimedia (content, link, arrow)"
+  },
+  "options": {},
+  "attributes": {
+    "content": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    },
+    "isArrow": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

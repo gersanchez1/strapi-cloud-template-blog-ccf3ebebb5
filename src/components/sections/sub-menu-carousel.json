@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_sections_sub_menu_carousels",
+  "info": {
+    "displayName": "Sub Menu Carousel",
+    "icon": "layer-group",
+    "description": "Sub-menu carousel with subcategory title and images"
+  },
+  "options": {},
+  "attributes": {
+    "subCategoryTitle": {
+      "type": "string"
+    },
+    "subMenuImages": {
+      "type": "component",
+      "repeatable": true,
+      "component": "sections.sub-menu-image"
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_sections_info_card_items",
+  "info": {
+    "displayName": "Info Card Item",
+    "icon": "image",
+    "description": "Individual info card with image, text, and promotion settings"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "string"
+    },
+    "mobileImage": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    },
+    "text1": {
+      "type": "string"
+    },
+    "text2": {
+      "type": "string"
+    },
+    "promotionSettings": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sections.promotion-settings"
+    }
+  }
+}

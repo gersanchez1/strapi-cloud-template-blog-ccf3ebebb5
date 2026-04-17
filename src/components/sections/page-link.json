@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_sections_page_links",
+  "info": {
+    "displayName": "Page Link",
+    "icon": "link",
+    "description": "Navigation page link (text, url)"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    }
+  }
+}

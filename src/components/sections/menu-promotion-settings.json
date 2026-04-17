@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_sections_menu_promotion_settings",
+  "info": {
+    "displayName": "Menu Promotion Settings",
+    "icon": "chart-line",
+    "description": "Promotion settings for menu images (promotion_creative is free text, not enum)"
+  },
+  "options": {},
+  "attributes": {
+    "promotion_id": {
+      "type": "string",
+      "default": ""
+    },
+    "promotion_name": {
+      "type": "string",
+      "default": ""
+    },
+    "promotion_creative": {
+      "type": "string",
+      "default": "Image"
+    },
+    "promotion_position": {
+      "type": "integer",
+      "default": 1
+    },
+    "promotion_target": {
+      "type": "string",
+      "default": ""
+    }
+  }
+}

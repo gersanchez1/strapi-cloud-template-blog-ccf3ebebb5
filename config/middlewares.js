@@ -8,5 +8,6 @@ module.exports = [
   'strapi::body',
   'strapi::session',
   'strapi::favicon',
+  'global::rest-cache',
   'strapi::public',
 ];

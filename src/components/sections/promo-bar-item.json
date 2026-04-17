@@ -1,0 +1,55 @@
+{
+  "collectionName": "components_sections_promo_bar_items",
+  "info": {
+    "displayName": "Promo Bar Item",
+    "icon": "bullhorn",
+    "description": "Promotional bar entry with styling, CTA, links, and Synerise segmentation"
+  },
+  "options": {},
+  "attributes": {
+    "onSynerise": {
+      "type": "boolean",
+      "default": false
+    },
+    "typeSynerise": {
+      "type": "string"
+    },
+    "promoBackground": {
+      "type": "string"
+    },
+    "promoText": {
+      "type": "string"
+    },
+    "promoTextColor": {
+      "type": "string"
+    },
+    "ctaText": {
+      "type": "string"
+    },
+    "ctaTextColor": {
+      "type": "string"
+    },
+    "linksListColor": {
+      "type": "string"
+    },
+    "linksList": {
+      "type": "component",
+      "repeatable": true,
+      "component": "sections.promo-bar-link"
+    },
+    "termsAndConditionsColor": {
+      "type": "string"
+    },
+    "termsAndConditions": {
+      "type": "string",
+      "default": ""
+    },
+    "isUniqueLink": {
+      "type": "boolean",
+      "default": false
+    },
+    "uniqueLink": {
+      "type": "string"
+    }
+  }
+}

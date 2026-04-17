@@ -1,0 +1,68 @@
+{
+  "kind": "collectionType",
+  "collectionName": "custom_headers",
+  "info": {
+    "singularName": "custom-header",
+    "pluralName": "custom-headers",
+    "displayName": "CustomHeader",
+    "description": "Full header with logo, promo bar, navigation, search, and user actions"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "page": {
+      "type": "string",
+      "required": true
+    },
+    "position": {
+      "type": "integer",
+      "default": 0
+    },
+    "logo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sections.header-logo"
+    },
+    "promoBar": {
+      "type": "component",
+      "repeatable": true,
+      "component": "sections.promo-bar-item"
+    },
+    "syneriseSegmentation": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sections.synerise-segmentation"
+    },
+    "navigation": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sections.navigation"
+    },
+    "searchInput": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sections.search-input"
+    },
+    "signInButton": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sections.sign-in-button"
+    },
+    "cartIcon": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sections.cart-icon"
+    },
+    "searchInputv2": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sections.search-input"
+    }
+  }
+}

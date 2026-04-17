@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_sections_sub_menu_images",
+  "info": {
+    "displayName": "Sub Menu Image",
+    "icon": "image",
+    "description": "Image item for sub-menu carousel"
+  },
+  "options": {},
+  "attributes": {
+    "src": {
+      "type": "string"
+    },
+    "alt": {
+      "type": "string"
+    },
+    "link": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sections.menu-image-link"
+    }
+  }
+}

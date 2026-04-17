@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_sections_synerise_segmentations",
+  "info": {
+    "displayName": "Synerise Segmentation",
+    "icon": "cog",
+    "description": "Synerise segmentation configuration with expression and assignments"
+  },
+  "options": {},
+  "attributes": {
+    "enabled": {
+      "type": "boolean",
+      "default": false
+    },
+    "expressionId": {
+      "type": "string"
+    },
+    "workspaceGuid": {
+      "type": "string"
+    },
+    "workspaceApiKey": {
+      "type": "string"
+    },
+    "assignments": {
+      "type": "json"
+    }
+  }
+}

@@ -246,6 +246,10 @@ async function importSeedData() {
     about: ['find', 'findOne'],
     'infocard-doble': ['find', 'findOne'],
     'use-strappi': ['find', 'findOne'],
+    'custom-banner-multi-media': ['find', 'findOne'],
+    'custom-product-shelf': ['find', 'findOne'],
+    'custom-info-card': ['find', 'findOne'],
+    'custom-header': ['find', 'findOne'],
   });
 
   // Create all entries

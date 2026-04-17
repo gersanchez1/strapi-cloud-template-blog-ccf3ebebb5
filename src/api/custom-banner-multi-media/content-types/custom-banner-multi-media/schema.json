@@ -1,0 +1,117 @@
+{
+  "kind": "collectionType",
+  "collectionName": "custom_banner_multi_medias",
+  "info": {
+    "singularName": "custom-banner-multi-media",
+    "pluralName": "custom-banner-multi-medias",
+    "displayName": "CustomBannerMultiMedia",
+    "description": "Banner with media/video and two text overlays with CTA"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "page": {
+      "type": "string",
+      "required": true
+    },
+    "position": {
+      "type": "integer",
+      "default": 0
+    },
+    "mediaSrc": {
+      "type": "string"
+    },
+    "mobileMediaSrc": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string",
+      "default": "/"
+    },
+    "urlVideoPes": {
+      "type": "string"
+    },
+    "urlVideoMobilePes": {
+      "type": "string"
+    },
+    "widthVideo": {
+      "type": "string"
+    },
+    "heigthVideo": {
+      "type": "string"
+    },
+    "widthVideoMobile": {
+      "type": "string"
+    },
+    "heigthVideoMobile": {
+      "type": "string"
+    },
+    "alignVideo": {
+      "type": "enumeration",
+      "enum": ["LEFT", "CENTER", "RIGHT"],
+      "default": "CENTER"
+    },
+    "buttonsVideo": {
+      "type": "enumeration",
+      "enum": ["TRANSPARENT", "WHITE"],
+      "default": "TRANSPARENT"
+    },
+    "isPriority": {
+      "type": "boolean",
+      "default": false
+    },
+    "text1": {
+      "type": "string"
+    },
+    "text2": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sections.banner-text2"
+    },
+    "termsAndConditions": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sections.terms-and-conditions"
+    },
+    "promotionSettings": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sections.promotion-settings"
+    },
+    "skuId": {
+      "type": "string",
+      "default": ""
+    },
+    "positionHorizontal": {
+      "type": "string",
+      "default": "20%"
+    },
+    "positionVertical": {
+      "type": "string",
+      "default": "50%"
+    },
+    "positionHorizontalMobile": {
+      "type": "string",
+      "default": "20%"
+    },
+    "positionVerticalMobile": {
+      "type": "string",
+      "default": "50%"
+    },
+    "markerConfiguration": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sections.marker-configuration"
+    },
+    "dontShowMobile": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

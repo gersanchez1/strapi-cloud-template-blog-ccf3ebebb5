@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_sections_drawer_menu_items",
+  "info": {
+    "displayName": "Drawer Menu Item",
+    "icon": "bars",
+    "description": "Individual drawer menu entry with campaign, content, images, and sub-menus"
+  },
+  "options": {},
+  "attributes": {
+    "campaignId": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "jsonContent": {
+      "type": "string"
+    },
+    "images": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sections.drawer-images"
+    },
+    "subMenuCarousels": {
+      "type": "component",
+      "repeatable": true,
+      "component": "sections.sub-menu-carousel"
+    }
+  }
+}

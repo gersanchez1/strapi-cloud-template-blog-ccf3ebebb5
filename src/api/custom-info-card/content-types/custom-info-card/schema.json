@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "custom_info_cards",
+  "info": {
+    "singularName": "custom-info-card",
+    "pluralName": "custom-info-cards",
+    "displayName": "CustomInfoCards",
+    "description": "Displays up to 4 informational cards in two rows of two"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "page": {
+      "type": "string",
+      "required": true
+    },
+    "position": {
+      "type": "integer",
+      "default": 0
+    },
+    "cards": {
+      "type": "component",
+      "repeatable": true,
+      "component": "sections.info-card-item",
+      "min": 1,
+      "max": 4,
+      "required": true
+    }
+  }
+}

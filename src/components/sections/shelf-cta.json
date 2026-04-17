@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_sections_shelf_ctas",
+  "info": {
+    "displayName": "Shelf CTA",
+    "icon": "link",
+    "description": "Call to action for product shelf (content, link)"
+  },
+  "options": {},
+  "attributes": {
+    "content": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    }
+  }
+}

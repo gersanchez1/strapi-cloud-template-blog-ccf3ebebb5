@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_sections_facets",
+  "info": {
+    "displayName": "Facet",
+    "icon": "filter",
+    "description": "Search facet with key-value pair for product filtering"
+  },
+  "options": {},
+  "attributes": {
+    "key": {
+      "type": "string",
+      "default": "productClusterIds"
+    },
+    "value": {
+      "type": "string",
+      "default": "140"
+    }
+  }
+}

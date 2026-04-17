@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_sections_drawer_images_containers",
+  "info": {
+    "displayName": "Drawer Images",
+    "icon": "images",
+    "description": "Container for drawer menu images"
+  },
+  "options": {},
+  "attributes": {
+    "imagesMenu": {
+      "type": "component",
+      "repeatable": true,
+      "component": "sections.drawer-image"
+    }
+  }
+}

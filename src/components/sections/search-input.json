@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_sections_search_inputs",
+  "info": {
+    "displayName": "Search Input",
+    "icon": "search",
+    "description": "Search input configuration with Synerise indexes"
+  },
+  "options": {},
+  "attributes": {
+    "placeholder": {
+      "type": "string",
+      "default": "Search everything at the store"
+    },
+    "apiHost": {
+      "type": "string",
+      "default": "https://api.geb.synerise.com"
+    },
+    "trackerKey": {
+      "type": "string"
+    },
+    "productsIndex": {
+      "type": "string"
+    },
+    "suggestionsIndex": {
+      "type": "string"
+    },
+    "articlesIndex": {
+      "type": "string"
+    },
+    "videosIndex": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_sections_drawer_images_items",
+  "info": {
+    "displayName": "Drawer Image",
+    "icon": "image",
+    "description": "Image item for drawer menu with link and promotion settings"
+  },
+  "options": {},
+  "attributes": {
+    "idContentSynerise": {
+      "type": "string"
+    },
+    "src": {
+      "type": "string"
+    },
+    "alt": {
+      "type": "string"
+    },
+    "link": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sections.menu-image-link"
+    },
+    "promotionSettings": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sections.menu-promotion-settings"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_sections_cart_icons",
+  "info": {
+    "displayName": "Cart Icon",
+    "icon": "shopping-cart",
+    "description": "Shopping cart icon configuration"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "enumeration",
+      "enum": ["ShoppingCart"],
+      "default": "ShoppingCart"
+    },
+    "alt": {
+      "type": "string",
+      "default": "Shopping Cart"
+    }
+  }
+}
