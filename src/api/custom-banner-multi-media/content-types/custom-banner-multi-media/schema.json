@@ -112,6 +112,18 @@
     "dontShowMobile": {
       "type": "boolean",
       "default": false
+    },
+    "loop": {
+      "type": "boolean",
+      "default": false
+    },
+    "autoPlay": {
+      "type": "boolean",
+      "default": false
+    },
+    "muted": {
+      "type": "boolean",
+      "default": false
     }
   }
 }

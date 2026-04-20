@@ -14,7 +14,7 @@
       "type": "string"
     },
     "jsonContent": {
-      "type": "string"
+      "type": "text"
     },
     "images": {
       "type": "component",
