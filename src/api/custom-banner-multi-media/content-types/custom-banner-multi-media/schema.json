@@ -25,10 +25,16 @@
       "default": 0
     },
     "mediaSrc": {
-      "type": "string"
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images", "videos"]
     },
     "mobileMediaSrc": {
-      "type": "string"
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images", "videos"]
     },
     "url": {
       "type": "string",

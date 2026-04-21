@@ -8,10 +8,16 @@
   "options": {},
   "attributes": {
     "image": {
-      "type": "string"
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
     },
     "mobileImage": {
-      "type": "string"
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
     },
     "link": {
       "type": "string"

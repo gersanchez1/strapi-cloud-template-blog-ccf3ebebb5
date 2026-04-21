@@ -13,10 +13,16 @@
       "default": "image"
     },
     "imageSrc": {
-      "type": "string"
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
     },
     "mobileImageSrc": {
-      "type": "string"
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
     },
     "isPriority": {
       "type": "boolean",

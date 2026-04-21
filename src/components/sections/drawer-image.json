@@ -11,7 +11,10 @@
       "type": "string"
     },
     "src": {
-      "type": "string"
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
     },
     "alt": {
       "type": "string"
