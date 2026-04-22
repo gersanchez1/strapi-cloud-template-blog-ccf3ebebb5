@@ -1,6 +1,7 @@
 'use strict';
 
 const { createCoreController } = require('@strapi/strapi').factories;
+const { flattenMedia } = require('../../../utils/flatten-media');
 
 const deepPopulate = {
   card1: { populate: '*' },
@@ -11,11 +12,15 @@ module.exports = createCoreController('api::infocard-doble.infocard-doble', () =
   /** @param {any} ctx */
   async find(ctx) {
     if (!ctx.query.populate) ctx.query.populate = deepPopulate;
-    return await super.find(ctx);
+    const res = await super.find(ctx);
+    res.data = flattenMedia(res.data);
+    return res;
   },
   /** @param {any} ctx */
   async findOne(ctx) {
     if (!ctx.query.populate) ctx.query.populate = deepPopulate;
-    return await super.findOne(ctx);
+    const res = await super.findOne(ctx);
+    res.data = flattenMedia(res.data);
+    return res;
   },
 }));
