@@ -24,6 +24,9 @@
       "type": "integer",
       "default": 0
     },
+    "store": {
+      "type": "string"
+    },
     "cards": {
       "type": "component",
       "repeatable": true,
