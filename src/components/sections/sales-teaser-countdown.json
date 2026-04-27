@@ -1,0 +1,47 @@
+{
+  "collectionName": "components_sections_sales_teaser_countdowns",
+  "info": {
+    "displayName": "Sales Teaser Countdown",
+    "icon": "clock",
+    "description": "Countdown for SalesTeaser with dates, colors, and labels"
+  },
+  "options": {},
+  "attributes": {
+    "isActive": {
+      "type": "boolean",
+      "default": true
+    },
+    "showCountDown": {
+      "type": "boolean",
+      "default": true
+    },
+    "startDate": {
+      "type": "string",
+      "default": ""
+    },
+    "endDate": {
+      "type": "string",
+      "default": ""
+    },
+    "color": {
+      "type": "string",
+      "default": "#000000"
+    },
+    "backgroundColor": {
+      "type": "string",
+      "default": "#fff"
+    },
+    "title": {
+      "type": "string",
+      "default": "Members deals"
+    },
+    "promotionText": {
+      "type": "string",
+      "default": "Available in stores"
+    },
+    "text": {
+      "type": "string",
+      "default": "Time left"
+    }
+  }
+}

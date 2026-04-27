@@ -250,6 +250,7 @@ async function importSeedData() {
     'custom-product-shelf': ['find', 'findOne'],
     'custom-info-card': ['find', 'findOne'],
     'custom-header': ['find', 'findOne'],
+    'sales-teaser': ['find', 'findOne'],
   });
 
   // Create all entries

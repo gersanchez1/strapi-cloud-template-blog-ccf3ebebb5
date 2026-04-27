@@ -1,0 +1,136 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sales_teasers",
+  "info": {
+    "singularName": "sales-teaser",
+    "pluralName": "sales-teasers",
+    "displayName": "SalesTeaser",
+    "description": "Sales teaser banner with CTA, drawer, countdown, and multimedia"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "page": {
+      "type": "string",
+      "required": true
+    },
+    "position": {
+      "type": "integer",
+      "default": 0
+    },
+    "store": {
+      "type": "string"
+    },
+    "onOff": {
+      "type": "boolean"
+    },
+    "sizeFontDesk": {
+      "type": "enumeration",
+      "enum": ["large", "small"],
+      "default": "large"
+    },
+    "sizeFontMob": {
+      "type": "enumeration",
+      "enum": ["large", "small"],
+      "default": "large"
+    },
+    "teaserBackground": {
+      "type": "string"
+    },
+    "colorText": {
+      "type": "enumeration",
+      "enum": ["negro", "rojo", "hexagesimal"],
+      "default": "negro"
+    },
+    "titleColor": {
+      "type": "string"
+    },
+    "title": {
+      "type": "text"
+    },
+    "subtitleColor": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "text"
+    },
+    "ctaColor": {
+      "type": "string"
+    },
+    "secundaryLabelColor": {
+      "type": "string"
+    },
+    "linksColor": {
+      "type": "string"
+    },
+    "cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sections.sales-teaser-cta"
+    },
+    "termsAndConditions": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sections.terms-and-conditions"
+    },
+    "countDown": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sections.sales-teaser-countdown"
+    },
+    "mediaSrc": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images", "videos"]
+    },
+    "mobileMediaSrc": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images", "videos"]
+    },
+    "isPriority": {
+      "type": "boolean",
+      "default": false
+    },
+    "url": {
+      "type": "string",
+      "default": "/"
+    },
+    "urlVideoPes": {
+      "type": "string"
+    },
+    "urlVideoMobilePes": {
+      "type": "string"
+    },
+    "alignVideo": {
+      "type": "enumeration",
+      "enum": ["LEFT", "CENTER", "RIGHT"],
+      "default": "CENTER"
+    },
+    "buttonsVideo": {
+      "type": "enumeration",
+      "enum": ["TRANSPARENT", "WHITE"],
+      "default": "TRANSPARENT"
+    },
+    "widthVideo": {
+      "type": "string"
+    },
+    "heigthVideo": {
+      "type": "string"
+    },
+    "widthVideoMobile": {
+      "type": "string"
+    },
+    "heigthVideoMobile": {
+      "type": "string"
+    }
+  }
+}

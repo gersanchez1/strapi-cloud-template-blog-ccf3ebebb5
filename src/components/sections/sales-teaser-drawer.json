@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_sections_sales_teaser_drawers",
+  "info": {
+    "displayName": "Sales Teaser Drawer",
+    "icon": "layer-group",
+    "description": "Drawer that opens from SalesTeaser CTA"
+  },
+  "options": {},
+  "attributes": {
+    "links": {
+      "type": "component",
+      "repeatable": true,
+      "component": "sections.sales-teaser-drawer-link"
+    },
+    "closeButtonColor": {
+      "type": "string"
+    },
+    "closeButton": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sections.sales-teaser-close-button"
+    }
+  }
+}

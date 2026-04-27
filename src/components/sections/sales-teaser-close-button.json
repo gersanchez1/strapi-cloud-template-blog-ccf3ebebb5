@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_sections_sales_teaser_close_buttons",
+  "info": {
+    "displayName": "Sales Teaser Close Button",
+    "icon": "close",
+    "description": "Close button inside the SalesTeaser drawer"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    }
+  }
+}

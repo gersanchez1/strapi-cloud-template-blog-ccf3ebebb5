@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_sections_sales_teaser_ctas",
+  "info": {
+    "displayName": "Sales Teaser CTA",
+    "icon": "cursor",
+    "description": "CTA for SalesTeaser with primary/secondary labels and drawer"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "secundaryLabel": {
+      "type": "string"
+    },
+    "drawer": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sections.sales-teaser-drawer"
+    }
+  }
+}

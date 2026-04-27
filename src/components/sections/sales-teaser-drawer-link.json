@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_sections_sales_teaser_drawer_links",
+  "info": {
+    "displayName": "Sales Teaser Drawer Link",
+    "icon": "link",
+    "description": "Link inside the SalesTeaser drawer"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string",
+      "required": true
+    },
+    "url": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
